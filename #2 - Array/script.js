@@ -42,3 +42,8 @@ let shop =
     }
 
     console.log("In the "+shop.name+" you can buy a "+shop.products[0]+" from "+shop.openingHours+" AM to "+shop.closingHours+" PM.")
+
+let names = [];
+names.push("Maria", "Peter", "Joseph");
+
+console.log(names);
