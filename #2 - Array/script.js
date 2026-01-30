@@ -29,3 +29,6 @@ personalID.height = 186.2;
 console.log(personalID)
 
 console.log(personalID.hobbies[0]);
+
+let sentences = personalID.name+" has gone "+personalID.hobbies[1];
+console.log(sentences);
