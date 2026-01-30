@@ -23,3 +23,5 @@ let array = ["Computer", "Keyboard"];
 array.push("Mouse");
 
 console.log(array);
+
+console.log(`Hello, my name is ${name}, I'm ${age} years old!`);
