@@ -30,8 +30,8 @@ console.log(personalID)
 
 console.log(personalID.hobbies[0]);
 
-let sentences = personalID.name+" has gone "+personalID.hobbies[1];
-console.log(sentences);
+let sentence = personalID.name+" has gone "+personalID.hobbies[1];
+console.log(sentence);
 
 let shop =
     {
