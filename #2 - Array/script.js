@@ -20,6 +20,7 @@ let personalID =
         name: "Viktor",
         lastName: "Maletkovic",
         dateOfBirth: "15/04/1998",
+        hobbies: ["programming", "fishing"]
     };
 
 console.log(personalID.name, personalID.dateOfBirth);
