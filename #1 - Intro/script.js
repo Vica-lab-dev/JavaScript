@@ -17,3 +17,9 @@ let lastName = "Maletkovic";
 let result = firstName+" "+lastName
 
 console.log(result)
+
+let firstNumber = 15;
+let secondNumber = 18;
+let count = firstNumber+secondNumber;
+
+console.log(count)
