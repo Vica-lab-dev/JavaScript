@@ -51,3 +51,8 @@ console.log(names);
 let components = ["monitor", "keyboard", "mouse"];
 components = [];
 console.log(components);
+
+
+let trees = ["oak", "pine", "maple"];
+trees.splice(0, trees.length);
+console.log(trees);
