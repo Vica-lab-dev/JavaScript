@@ -56,3 +56,7 @@ console.log(components);
 let trees = ["oak", "pine", "maple"];
 trees.splice(0, trees.length);
 console.log(trees);
+
+let books = ["Harry Potter", "The Great Gatsby", "To Kill a Mockingbird"];
+books.unshift("1984");
+console.log(books);
