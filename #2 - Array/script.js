@@ -47,3 +47,7 @@ let names = [];
 names.push("Maria", "Peter", "Joseph");
 
 console.log(names);
+
+let components = ["monitor", "keyboard", "mouse"];
+components = [];
+console.log(components);
