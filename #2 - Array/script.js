@@ -11,3 +11,6 @@ let cars = ["BMW", "Audi", "Mercedes"];
 console.log(cars)
 cars[0] = "Zastava";
 console.log(cars);
+
+cars.sort()
+console.log(cars)
