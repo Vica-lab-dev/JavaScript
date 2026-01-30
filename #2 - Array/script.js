@@ -14,3 +14,12 @@ console.log(cars);
 
 cars.sort()
 console.log(cars)
+
+let personalID =
+    {
+        name: "Viktor",
+        lastName: "Maletkovic",
+        dateOfBirth: "15/04/1998",
+    };
+
+console.log(personalID.name, personalID.dateOfBirth);
