@@ -20,7 +20,7 @@ let personalID =
         name: "Viktor",
         lastName: "Maletkovic",
         dateOfBirth: "15/04/1998",
-        hobbies: ["programming", "fishing"]
+        hobbies: ["programming", "fishing"],
     };
 
 console.log(personalID.name, personalID.dateOfBirth);
@@ -32,3 +32,13 @@ console.log(personalID.hobbies[0]);
 
 let sentences = personalID.name+" has gone "+personalID.hobbies[1];
 console.log(sentences);
+
+let shop =
+    {
+        name: "Shopping Center",
+        products: ["laptop", "smartphone", "headphones"],
+        openingHours: "08",
+        closingHours: "22",
+    }
+
+    console.log("In the "+shop.name+" you can buy a "+shop.products[0]+" from "+shop.openingHours+" AM to "+shop.closingHours+" PM.")
