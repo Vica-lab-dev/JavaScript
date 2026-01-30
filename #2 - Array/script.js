@@ -27,3 +27,5 @@ console.log(personalID.name, personalID.dateOfBirth);
 
 personalID.height = 186.2;
 console.log(personalID)
+
+console.log(personalID.hobbies[0]);
