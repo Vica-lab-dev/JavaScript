@@ -3,3 +3,6 @@ console.log(products, products[1]);
 
 products.push("Newspaper")
 console.log(products);
+
+products.splice(0, 1);
+console.log(products);
