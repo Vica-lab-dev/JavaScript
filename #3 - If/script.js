@@ -3,12 +3,12 @@ let price = 99;
 
 if(price == 99)
 {
-    console.log("Bread is expensive!")
+    console.log("Bread is expensive!");
 }
 
 if(product == "bread")
 {
-    console.log("Bread found!")
+    console.log("Bread found!");
 }
 
 
