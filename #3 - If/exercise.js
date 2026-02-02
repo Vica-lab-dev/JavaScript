@@ -25,3 +25,15 @@ else if(price > 500)
 {
     console.log("It is expensive!");
 }
+
+let component = "keyboard";
+let componentPrice = 60;
+
+if(component == "keyboard" && componentPrice == 50)
+{
+    console.log("Testing successful!");
+}
+else
+{
+    console.log("Testing failed!");
+}
