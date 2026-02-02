@@ -1,4 +1,4 @@
-let content = "image";
+let content = "site";
 
 if(content == "video")
 {
@@ -11,4 +11,17 @@ else if(content == "site")
 else
 {
     console.log("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxngkaPCwZS-pN67h-JfCygadqtqu7g2N7NQ&s");
+}
+
+
+let price = 500;
+
+if(price < 500)
+{
+    console.log("It is cheap!");
+}
+
+else if(price > 500)
+{
+    console.log("It is expensive!");
 }
