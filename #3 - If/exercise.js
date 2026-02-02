@@ -48,3 +48,19 @@ else
 {
     console.log("Adult!");
 }
+
+let array = [-25, 64, 7, 43, 75];
+let last = array[array.length - 1]
+
+if(array[0] + last == 50)
+{
+    console.log("The sum is 50!");
+}
+else if(array[0] + last > 50)
+{
+    console.log("The sum is greater than 50!");
+}
+else
+{
+    console.log("The sum is less than 50!")
+}
