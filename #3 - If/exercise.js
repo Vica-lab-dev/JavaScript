@@ -37,3 +37,14 @@ else
 {
     console.log("Testing failed!");
 }
+
+let age = 27;
+
+if(age < 18)
+{
+    console.log("Minor!");
+}
+else
+{
+    console.log("Adult!");
+}
