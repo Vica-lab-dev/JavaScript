@@ -64,3 +64,18 @@ else
 {
     console.log("The sum is less than 50!")
 }
+
+let fruit = "banaNa";
+
+if(fruit.toLowerCase() == "apple")
+{
+    console.log("The fruit is Apple!")
+}
+else if(fruit.toLowerCase() == "banana")
+{
+    console.log("The fruit is Banana!");
+}
+else
+{
+    console.log("Some other fruit!");
+}
