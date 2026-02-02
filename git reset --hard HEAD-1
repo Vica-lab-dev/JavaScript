@@ -1,0 +1,46 @@
+[33mbf31b13[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m fix: remove redundant .toUpperCase() in homework 3
+[33m5a36b37[m Add conditional checks for apple, banana, and other fruits
+[33m6ba498b[m Add conditional check for sum of first and last array elements
+[33m6de5bc5[m Add age check to determine minor or adult
+[33m9674408[m Add homework 3 - Conditionals
+[33m9f2a319[m Add conditional test result for keyboard components
+[33mbeff485[m Add price check with cheap/expensive messages
+[33m3516294[m Add else if branch for site content
+[33m1726e83[m Add missing semicolons to console logs
+[33m65a0b11[m Load video or image URL based on content type
+[33m4cd8797[m Add second JavaScript file to HTML
+[33m2b2c2fe[m Add BMW conditional logging
+[33ma25cedc[m Add check for bread product and log found message
+[33ma461d39[m Add price check for bread and log expensive message
+[33maf31186[m Add basic HTML structure and include script file
+[33m5f764b2[m Add .gitignore file
+[33ma5c6786[m .gitignore file
+[33m566bfc0[m .gitignore file
+[33mcf2afd6[m Merge remote-tracking branch 'origin/master'
+[33m8c7ffec[m .gitignore file
+[33m0f55898[m Delete #2 - Array/.gitignore
+[33md79a028[m Delete #1 - Intro/.gitignore
+[33mb287d90[m Add a new book to the beginning of the books array using unshift
+[33m586bc2e[m Clear trees array using splice method
+[33m8f0cc6b[m Clear components array by assigning an empty array
+[33m57f547e[m Create names array and add multiple elements with push
+[33m83c8811[m Rename variable sentences to sentence
+[33m40e458c[m Homework 2 - Create shop object and log product availability with opening hours
+[33m8cb81dc[m Concatenate personalID.name with a hobby to form a sentence
+[33mfbeb3aa[m Log first hobby from personalID object
+[33m6ecbce4[m Add hobbies array to personalID object
+[33maea0baf[m Add height property to personalID object
+[33m9e5e3b2[m Create personalID object and log name and dateOfBirth
+[33m42c8d5c[m Sort cars array alphabetically
+[33m2482445[m Update first element of cars array
+[33mc684a39[m Add .gitignore file
+[33m94a1ecc[m Merge remote-tracking branch 'origin/master'
+[33m8ac574e[m Remove first element from products array using splice
+[33mcae4e3a[m Delete #1 - Intro/.gitignore
+[33m68b05b8[m Delete #2 - Array/.gitignore
+[33m0466633[m Add array of products and demonstrate accessing and pushing elements
+[33m01fe293[m Use template literals to print name and age
+[33me82e280[m Homework 1 - Add let array and demonstrate push method
+[33mafbf920[m Add example of adding two numbers and logging the result
+[33md8ca73b[m Add string concatenation example for full name
+[33md51e945[m Add examples of basic variable types (string, number, boolean)
