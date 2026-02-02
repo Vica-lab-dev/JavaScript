@@ -1,7 +1,7 @@
 let name = "Vica";
 let password = 'secretpassword';
 
-if((name.toLowerCase() == "vica" && password == "secretpassword") ||
+if((name.toLowerCase() == "admin" && password == "secretpassword") ||
     (name.toUpperCase() == "ADMIN" && password == "secretpassword"))
 {
     console.log("Welcome back!");
