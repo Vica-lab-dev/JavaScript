@@ -7,3 +7,9 @@ for(let i= 0; i < 100; i++)
 {
     console.log(i);
 }
+
+let cars = ["bmw", "audi", "zastava", "mercedes", "amg"];
+for(let i= 0; i < 5; i++)
+{
+    console.log(cars[i]);
+}
