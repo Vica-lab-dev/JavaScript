@@ -8,8 +8,8 @@ for(let i= 0; i < 100; i++)
     console.log(i);
 }
 
-let cars = ["bmw", "audi", "zastava", "mercedes", "amg"];
-for(let i= 0; i < 5; i++)
+let cars = ["bmw", "audi", "zastava", "mercedes", "amg", "honda", "toyota"];
+for(let i= 0; i < cars.length; i++)
 {
     console.log(cars[i]);
 }
