@@ -37,3 +37,33 @@ for(i in car)
             break;
     }
 }
+
+let students =
+    [
+        {
+            name: "Viktor",
+            grade: 40,
+        },
+        {
+          name: "Marko",
+          grade: 70,
+        },
+        {
+          name: "Ivan",
+          grade: 51,
+        }
+
+    ]
+
+
+for(let i = 0; i < students.length; i++)
+{
+    if(students[i]["grade"] >= 50)
+    {
+        console.log(students[i]["name"]+" Pass!");
+    }
+    else
+    {
+        console.log(students[i]["name"]+" Fail!");
+    }
+}
