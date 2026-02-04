@@ -20,3 +20,15 @@ else
 {
     console.log("You are a regular member!");
 }
+
+let allowedTypes = ["admin", "moderator"];
+let ifCheck = allowedTypes.includes(userType);
+
+if(ifCheck == true)
+{
+    console.log("You are an administrator!");
+}
+else
+{
+    console.log("You are not an administrator!");
+}
