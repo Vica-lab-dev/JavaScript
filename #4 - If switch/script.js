@@ -1,20 +1,11 @@
 let name = "admin";
 let password = "secretpassword";
 
-if(name == "admin")
+if(name == "admin" && password == "secretpassword")
 {
-    console.log("Hello, administrator!");
+    console.log("Your data is correct, welcome!");
 }
 else
 {
-    console.log("You are not administrator!");
-}
-
-if(password == "secretpassword")
-{
-    console.log("Password correct!");
-}
-else
-{
-    console.log("Wrong password!");
+    console.log("Your data is not correct. Try again!");
 }
