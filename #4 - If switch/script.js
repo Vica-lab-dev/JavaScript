@@ -1,4 +1,5 @@
 let name = "admin";
+let password = "secretpassword";
 
 if(name == "admin")
 {
@@ -7,4 +8,13 @@ if(name == "admin")
 else
 {
     console.log("You are not administrator!");
+}
+
+if(password == "secretpassword")
+{
+    console.log("Password correct!");
+}
+else
+{
+    console.log("Wrong password!");
 }
