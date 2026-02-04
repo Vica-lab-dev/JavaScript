@@ -22,9 +22,9 @@ else
 }
 
 let allowedTypes = ["admin", "moderator"];
-let ifCheck = allowedTypes.includes(userType);
+let typeCheck = allowedTypes.includes(userType);
 
-if(ifCheck == true)
+if(typeCheck)
 {
     console.log("You are an administrator!");
 }
