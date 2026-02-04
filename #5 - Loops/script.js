@@ -20,3 +20,13 @@ if(firstLetter.includes(name[0]))
 {
     console.log("First letter is a vowel!");
 }
+
+let number = "2";
+if(number === 2)
+{
+    console.log("Number is 2!");
+}
+else
+{
+    console.log("Number is not 2!");
+}
