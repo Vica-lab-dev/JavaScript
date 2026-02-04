@@ -11,5 +11,9 @@ for(let i= 0; i < 100; i++)
 let cars = ["bmw", "audi", "zastava", "mercedes", "amg", "honda", "toyota"];
 for(let i= 0; i < cars.length; i++)
 {
+    if(cars[i][0] === "a")
+    {
+        continue;
+    }
     console.log(cars[i]);
 }
