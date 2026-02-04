@@ -32,3 +32,21 @@ else
 {
     console.log("You are not an administrator!");
 }
+
+let dayOfTheWeek = "Sunday";
+
+switch (dayOfTheWeek)
+{
+    case "Saturday":
+    case "Sunday":
+        console.log("Weekend!");
+        break;
+
+    case "Friday":
+        console.log("Weekend is coming!");
+        break;
+
+    default:
+        console.log("Work work!");
+        break;
+}
