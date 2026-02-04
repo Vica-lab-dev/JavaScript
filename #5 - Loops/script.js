@@ -14,3 +14,9 @@ if(name[0] == "a")
 {
     console.log("Name starts with vowel!");
 }
+
+let firstLetter = ["a", "e", "i", "o", "u"];
+if(firstLetter.includes(name[0]))
+{
+    console.log("First letter is a vowel!");
+}
