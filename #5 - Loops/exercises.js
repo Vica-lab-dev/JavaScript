@@ -10,3 +10,30 @@ for(let i = 0; i < numbers.length; i++)
         console.log(numbers[i]+" = Odd!");
     }
 }
+
+let car =
+    {
+        make: "Toyota",
+        model: "Corolla",
+        year: 2005,
+        color: "white",
+    }
+
+for(i in car)
+{
+    switch(i)
+    {
+        case "make":
+            console.log("Make:"+car[i]);
+            break;
+        case "model":
+            console.log("Model:"+car[i])
+            break;
+        case "year":
+            console.log("Year:"+car[i])
+            break;
+        case "color":
+            console.log("Color:"+car[i])
+            break;
+    }
+}
