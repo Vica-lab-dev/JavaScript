@@ -9,3 +9,14 @@ else
 {
     console.log("Your data is not correct. Try again!");
 }
+
+let userType = "moderator";
+
+if(userType == "admin" || userType == "moderator")
+{
+    console.log("You are an administrator!");
+}
+else
+{
+    console.log("You are a regular member!");
+}
