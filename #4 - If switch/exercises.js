@@ -75,3 +75,18 @@ switch(dayOfWeek.toLowerCase())
         console.log("It's a weekday!");
         break;
 }
+
+let score = 90;
+
+if(score < 50)
+{
+    console.log("Fail!");
+}
+else if(score >= 50 && score < 75)
+{
+    console.log("Pass!");
+}
+else
+{
+    console.log("Excellent!");
+}
