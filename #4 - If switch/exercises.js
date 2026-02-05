@@ -31,3 +31,18 @@ else
 {
     console.log(timeOfDay);
 }
+
+let experience = 1;
+
+if(experience <= 2)
+{
+    console.log("Beginner!");
+}
+else if(experience > 2 && experience <= 5)
+{
+    console.log("Experienced worker!");
+}
+else
+{
+    console.log("Veteran employee!");
+}
