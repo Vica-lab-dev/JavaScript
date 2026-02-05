@@ -61,3 +61,17 @@ else
 {
     console.log("Adult!");
 }
+
+let dayOfWeek = "MoNdAy";
+
+switch(dayOfWeek.toLowerCase())
+{
+    case "sunday":
+    case "saturday":
+        console.log("It's a weekend!");
+        break;
+
+    default:
+        console.log("It's a weekday!");
+        break;
+}
