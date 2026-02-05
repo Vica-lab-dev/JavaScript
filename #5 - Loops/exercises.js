@@ -181,3 +181,23 @@ for(let i = 0; i < employees.length; i++)
         console.log(employees[i]["name"]+" has a low salary!");
     }
 }
+
+let cities = ["New York", "Belgrade", "Paris"];
+
+for(let i = 0; i < cities.length; i++)
+{
+    switch(cities[i])
+    {
+        case "New York":
+            console.log("Welcome to New York!");
+            break;
+
+        case "Belgrade":
+            console.log("Welcome to Belgrade!");
+            break;
+
+        case "Paris":
+            console.log("Welcome to Paris!");
+            break;
+    }
+}
