@@ -116,3 +116,34 @@ switch(fruits[i])
             console.log(fruits[i]+" - is not available!");
     }
 }
+
+let book =
+    {
+        "Harry Potter":
+            {
+                title: "Harry Potter",
+                author: "JK Rowling",
+                year: 21,
+                genre: "Scfi",
+            },
+
+        "The Great Gatsby":
+            {
+                title: "The Great Gatsby",
+                author: "F. Scott Fitzgerald",
+                year: 2002,
+                genre: "Novel",
+            }
+    }
+
+for(i in book)
+{
+    if(book[i]["year"] < 2000)
+    {
+        console.log(i+" is old book!");
+    }
+    else
+    {
+        console.log(i+" is new book!");
+    }
+}
