@@ -89,3 +89,30 @@ for(let i = 0; i < grades.length; i++)
         console.log(grades[i]+" - Fail!");
     }
 }
+
+let fruits = ["banana", "apple", "kiwi", "pomorange", "mango"];
+
+for(let i = 0; i < fruits.length; i++)
+{
+switch(fruits[i])
+    {
+        case "banana":
+            console.log(fruits[i]+" is yellow!");
+            break;
+
+        case "apple":
+            console.log(fruits[i]+" is red!");
+            break;
+
+        case "kiwi":
+            console.log(fruits[i]+" is green!");
+            break;
+
+        case "pomorange":
+            console.log(fruits[i]+" is orange!");
+            break;
+
+        default:
+            console.log(fruits[i]+" - is not available!");
+    }
+}
