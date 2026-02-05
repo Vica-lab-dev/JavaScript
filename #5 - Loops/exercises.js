@@ -67,3 +67,25 @@ for(let i = 0; i < students.length; i++)
         console.log(students[i]["name"]+" Fail!");
     }
 }
+
+let grades =  [91, 79, 63, 49];
+
+for(let i = 0; i < grades.length; i++)
+{
+    if(grades[i] >= 90)
+    {
+        console.log(grades[i]+" - Excellent!");
+    }
+    else if(grades[i] >= 75 && grades[i] < 90)
+    {
+        console.log(grades[i]+" - Good!");
+    }
+    else if(grades[i] >= 50 && grades[i] < 75)
+    {
+        console.log(grades[i]+" - Average!");
+    }
+    else
+    {
+        console.log(grades[i]+" - Fail!");
+    }
+}
