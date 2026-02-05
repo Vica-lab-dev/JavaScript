@@ -147,3 +147,37 @@ for(i in book)
         console.log(i+" is new book!");
     }
 }
+
+let employees =
+    [
+        {
+            name: "John",
+            salary: 51000,
+        },
+
+        {
+           name: "Marta",
+           salary: 38000,
+        },
+
+        {
+            name: "Vick",
+            salary: 26000,
+        }
+    ]
+
+for(let i = 0; i < employees.length; i++)
+{
+    if(employees[i]["salary"] >= 50000)
+    {
+        console.log(employees[i]["name"]+" has a high salary!");
+    }
+    else if(employees[i]["salary"] >= 30000 && employees[i]["salary"] < 50000)
+    {
+        console.log(employees[i]["name"]+" has a medium salary!");
+    }
+    else
+    {
+        console.log(employees[i]["name"]+" has a low salary!");
+    }
+}
