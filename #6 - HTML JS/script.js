@@ -9,7 +9,7 @@ let cart =
     [
         {
             name: "Bread",
-            price: 99,
+            price: 70,
             amount: 1
         },
 
@@ -28,5 +28,9 @@ let cart =
 
 for(let price in cart)
 {
+    if(cart[price]["price"] > 200)
+    {
+        break;
+    }
     console.log(cart[price]["price"])
 }
