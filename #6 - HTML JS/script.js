@@ -28,9 +28,11 @@ let cart =
 
 for(let price in cart)
 {
-    if(cart[price]["price"] > 200)
+    let productPrice = cart[price]["price"];
+
+    if(productPrice > 200)
     {
         break;
     }
-    console.log(cart[price]["price"])
+    console.log(productPrice)
 }
