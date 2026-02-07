@@ -1,17 +1,9 @@
-let weather = prompt("Enter weather condition").toLowerCase();
-
-switch (weather)
+let userName = prompt("Enter your name").toLowerCase();
+if(userName.length < 5)
 {
-    case "sunny":
-        alert("Wear sunglasses!");
-        break;
-    case "rainy":
-        alert("Take an umbrella!");
-        break;
-    case "cloudy":
-        alert("It’s cloudy outside — a light layer could be useful");
-        break;
-    default:
-        alert("Try sunny, cloudy or rainy!");
-        break;
+    alert("Hello "+userName);
+}
+else
+{
+    alert("Welcome "+userName);
 }
