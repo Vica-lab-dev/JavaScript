@@ -1,35 +1,17 @@
-// let names = ["admin", "administrator", 'viktor'];
-//
-// let name= prompt("Enter your name").toLowerCase();
-//
-// if(names.includes(name))
-// {
-//     alert("Welcome "+name);
-// }
-// else
-// {
-//     alert("You do not have access to this site!");
-// }
+let weather = prompt("Enter weather condition").toLowerCase();
 
-let grade = prompt("Enter grade 0-100");
-
-if(grade < 100 && grade >= 90)
+switch (weather)
 {
-    alert("Excellent!");
-}
-else if(grade < 90 && grade >= 75)
-{
-    alert("Good!");
-}
-else if(grade < 75 && grade >= 50)
-{
-    alert("Average!");
-}
-else if(grade < 50 && grade >= 0)
-{
-    alert("Fail!");
-}
-else
-{
-    alert("Try again!");
+    case "sunny":
+        alert("Wear sunglasses!");
+        break;
+    case "rainy":
+        alert("Take an umbrella!");
+        break;
+    case "cloudy":
+        alert("It’s cloudy outside — a light layer could be useful");
+        break;
+    default:
+        alert("Try sunny, cloudy or rainy!");
+        break;
 }
