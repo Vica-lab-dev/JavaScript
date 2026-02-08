@@ -7,6 +7,11 @@ let elements = document.getElementsByClassName("description");
 elements[0].style.color = "red";
 elements[1].style.color = "blue";
 
+for(let i in elements)
+{
+    elements[i].innerText = i;
+}
+
 let hTitle = document.getElementsByClassName("title")
 hTitle[0].style.color = "green";
 
