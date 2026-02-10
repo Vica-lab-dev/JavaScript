@@ -25,4 +25,4 @@ for(let price of prices)
     {
         price.style.color = "green";
     }
-    }
+}
