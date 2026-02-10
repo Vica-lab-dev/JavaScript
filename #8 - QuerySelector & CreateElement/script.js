@@ -9,7 +9,7 @@ document.getElementsByClassName("subtitle2")[0].style.color = "blue";
 
 let products = document.querySelectorAll(".product");
 
-for(let product in products)
+for(let product of products)
 {
-    products[product].style.color = "red";
+    product.style.color = "red";
 }
