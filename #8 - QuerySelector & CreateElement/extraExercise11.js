@@ -3,11 +3,11 @@ let ul = document.querySelector("#roles");
 let roles = ["Admin", "User", "Guest"];
 
 
-for(let i = 0; i < roles.length; i++)
+for(let role of roles)
 {
     let li = document.createElement("li");
 
-    switch (roles[i])
+    switch (role)
     {
         case "Admin":
             li.textContent = "Admin access";
