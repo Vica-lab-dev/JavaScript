@@ -1,0 +1,27 @@
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#main div {
+    width: 20%;
+    padding: 10px;
+    position: relative;
+}
+
+#main img {
+    max-width: 100%;
+}
+
+.productionYear {
+    position: absolute;
+    width: 35px;
+    top: 10px;
+    background: #1f2937;
+    color: white;
+    padding: 3px 10px;
+    font-size: 14px;
+    border-radius: 0 10px 0 10px;
+}

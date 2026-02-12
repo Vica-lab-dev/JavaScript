@@ -2,42 +2,50 @@ let cars = [
     {
         name: "Audi A4",
         price: 9999,
-        image: "https://www.audi.rs/content/dam/nemo/models/a4/a4-sedan/my-2023/1920x1080-inline-media-gallery/1920x1080-audi-a4-sedan.jpg"
+        production_year: 2012,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRMxq4ESZEyFq-HB8jHS44X-Mk_V7tQvztQ&s"
     },
     {
         name: "Audi A6",
         price: 14500,
-        image: "https://www.audi.rs/content/dam/nemo/models/a6/a6-sedan/my-2023/1920x1080-inline-media-gallery/1920x1080-audi-a6-sedan.jpg"
+        production_year: 2025,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRMxq4ESZEyFq-HB8jHS44X-Mk_V7tQvztQ&s"
     },
     {
         name: "BMW M3",
         price: 18900,
-        image: "https://www.bmw.rs/content/dam/bmw/common/all-models/m-series/m3-sedan/2023/overview/bmw-m3-sedan-overview.jpg"
+        production_year: 2014,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRMxq4ESZEyFq-HB8jHS44X-Mk_V7tQvztQ&s"
     },
     {
         name: "BMW M5",
         price: 25900,
-        image: "https://www.bmw.rs/content/dam/bmw/common/all-models/m-series/m5-sedan/2023/overview/bmw-m5-sedan-overview.jpg"
+        production_year: 2013,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRMxq4ESZEyFq-HB8jHS44X-Mk_V7tQvztQ&s"
     },
     {
         name: "Mercedes C-Class",
         price: 11200,
-        image: "https://www.mercedes-benz.rs/content/dam/hq/passengercars/cars/c-class/saloon-w206/overview/teaser.jpg"
+        production_year: 2014,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRMxq4ESZEyFq-HB8jHS44X-Mk_V7tQvztQ&s"
     },
     {
         name: "Mercedes E-Class",
         price: 17800,
-        image: "https://www.mercedes-benz.rs/content/dam/hq/passengercars/cars/e-class/saloon-w213/overview/teaser.jpg"
+        production_year: 2025,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRMxq4ESZEyFq-HB8jHS44X-Mk_V7tQvztQ&s"
     },
     {
         name: "VW Passat",
         price: 8900,
-        image: "https://www.volkswagen.rs/content/dam/vw-ngw/vw_pkw/importers/rs/models/passat/passat-teaser.jpg"
+        production_year: 2012,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRMxq4ESZEyFq-HB8jHS44X-Mk_V7tQvztQ&s"
     },
     {
         name: "VW Golf 7",
         price: 7600,
-        image: "https://www.volkswagen.rs/content/dam/vw-ngw/vw_pkw/importers/rs/models/golf-7/golf-7-teaser.jpg"
+        production_year: 2015,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRMxq4ESZEyFq-HB8jHS44X-Mk_V7tQvztQ&s"
     }
 ];
 
@@ -54,6 +62,16 @@ for(let car of cars)
     paragraph.appendChild(span);
     div.appendChild(image);
     div.appendChild(paragraph);
+
+    if(car.production_year === 2025)
+    {
+        let productionYearSpan = document.createElement("span");
+        productionYearSpan.textContent = "NEW!";
+        productionYearSpan.classList = "productionYear";
+
+        div.appendChild(productionYearSpan);
+
+    }
 
     document.querySelector("#main").appendChild(div);
 
