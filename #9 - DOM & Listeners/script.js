@@ -59,11 +59,11 @@ for(let room of rooms)
     roomSelector.appendChild(roomOption);
 }
 
+let currentCity = null;
+
+citySelector.addEventListener("change", function(event) {
+    currentCity = event.currentTarget.value;
+});
 document.querySelector("#searchPropertiesButton").addEventListener("click", function() {
-    console.log("test")
+    console.log(currentCity)
 });
-
-citySelector.addEventListener("change", function() {
-    console.log("Changed")
-});
-
