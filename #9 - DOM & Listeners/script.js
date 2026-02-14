@@ -63,3 +63,7 @@ document.querySelector("#searchPropertiesButton").addEventListener("click", func
     console.log("test")
 });
 
+citySelector.addEventListener("change", function() {
+    console.log("Changed")
+});
+
