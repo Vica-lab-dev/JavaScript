@@ -36,3 +36,25 @@ for(let type of types)
 
     typeSelector.appendChild(arrayTypes);
 }
+
+let roomSelector = document.querySelector("#rooms");
+
+let rooms =
+    [
+        "Studio apartment",
+        "One-bedroom apartment",
+        "Two-bedroom apartment",
+        "Three-bedroom apartment",
+        "Four-bedroom apartment",
+        "Penthouse",
+        "Duplex",
+        "Loft"
+    ]
+
+for(let room of rooms)
+{
+    let roomOption = document.createElement("option");
+    roomOption.innerHTML = room;
+
+    roomSelector.appendChild(roomOption);
+}
