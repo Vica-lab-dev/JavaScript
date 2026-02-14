@@ -61,14 +61,19 @@ for(let room of rooms)
 
 let currentCity = null;
 let currentType = null;
+let currentRoom = null;
 
 typeSelector.addEventListener("change", function(event){
     currentType = event.currentTarget.value;
 });
 
+roomSelector.addEventListener("change", function(event){
+    currentRoom = event.currentTarget.value;
+})
+
 citySelector.addEventListener("change", function(event) {
     currentCity = event.currentTarget.value;
 });
 document.querySelector("#searchPropertiesButton").addEventListener("click", function() {
-    console.log(currentCity, currentType)
+    console.log(currentCity, currentType, currentRoom);
 });
