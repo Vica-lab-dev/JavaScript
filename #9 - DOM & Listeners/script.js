@@ -58,3 +58,8 @@ for(let room of rooms)
 
     roomSelector.appendChild(roomOption);
 }
+
+document.querySelector("#searchPropertiesButton").addEventListener("click", function() {
+    console.log("test")
+});
+
