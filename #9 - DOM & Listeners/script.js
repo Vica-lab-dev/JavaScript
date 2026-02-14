@@ -77,3 +77,78 @@ citySelector.addEventListener("change", function(event) {
 document.querySelector("#searchPropertiesButton").addEventListener("click", function() {
     console.log(currentCity, currentType, currentRoom);
 });
+
+
+let realEstates =
+    [
+        {
+            city: "Beograd",
+            option: "apartments",
+            type: "Studio apartment",
+            price: 42000,
+            size: 42
+        },
+        {
+            city: "Subotica",
+            option: "houses",
+            type: "One-bedroom apartment",
+            price: 35000,
+            size: 60
+        },
+        {
+            city: "Novi Sad",
+            option: "land plots",
+            type: "Duplex",
+            price: 64400,
+            size: 79
+        },
+        {
+            city: "Sarajevo",
+            option: "commercial properties",
+            type: "Loft",
+            price: 48000,
+            size: 85
+        },
+        {
+            city: "Podgorica",
+            option: "null",
+            type: "Two-bedroom apartment",
+            price: 32000,
+            size: 55
+        },
+        {
+            city: "Zagreb",
+            option: "garages/parking spaces",
+            type: "garages/parking spaces",
+            price: 45000,
+            size: 20
+        }
+    ]
+
+let divEstates = document.querySelector("#estates");
+
+for(let estate of realEstates)
+{
+    let div = document.createElement("div");
+    divEstates.appendChild(div);
+
+    let h1 = document.createElement("h1");
+    h1.innerHTML = estate.type+" - "+estate.city;
+    div.appendChild(h1);
+
+    let optionParagraph = document.createElement("p");
+    optionParagraph.innerHTML ="Option: "+estate.option;
+    if(estate.option === "null")
+    {
+        optionParagraph.innerHTML = "--";
+    }
+    div.appendChild(optionParagraph);
+
+    let priceParagraph = document.createElement("p");
+    priceParagraph.innerHTML ="Price: "+estate.price;
+    div.appendChild(priceParagraph);
+
+    let sizeParagraph = document.createElement("p");
+    sizeParagraph.innerHTML ="Size: "+estate.size;
+    div.appendChild(sizeParagraph);
+}
