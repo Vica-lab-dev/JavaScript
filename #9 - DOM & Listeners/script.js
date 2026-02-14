@@ -8,14 +8,14 @@ let cities =
         "Zagreb"
     ]
 
-let select = document.querySelector("#cities");
+let citySelector = document.querySelector("#cities");
 
 for(let city of cities)
 {
     let arrayCities = document.createElement("option");
     arrayCities.innerHTML = city;
 
-    select.appendChild(arrayCities);
+    citySelector.appendChild(arrayCities);
 }
 
 let types =
