@@ -17,3 +17,22 @@ for(let city of cities)
 
     select.appendChild(arrayCities);
 }
+
+let types =
+    [
+        "Apartments",
+        "houses",
+        "commercial properties",
+        "land plots",
+        "garages/parking spaces"
+    ]
+
+let typeSelector = document.querySelector("#type");
+
+for(let type of types)
+{
+    let arrayTypes = document.createElement("option");
+    arrayTypes.innerHTML = type;
+
+    typeSelector.appendChild(arrayTypes);
+}
