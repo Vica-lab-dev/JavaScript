@@ -1,0 +1,27 @@
+.hidden{
+    display: none;
+}
+
+#estates{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.estate{
+    width: 25%;
+    height: auto;
+    background-color: greenyellow;
+    padding: 2px;
+    margin: 2px;
+}
+
+.form{
+    text-align: center;
+}
+
+.estate * {
+
+    text-align: center;
+}
