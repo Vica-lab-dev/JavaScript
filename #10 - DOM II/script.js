@@ -122,6 +122,21 @@ roomSelector.addEventListener("change", function(event){
 
 citySelector.addEventListener("change", function(event) {
     currentCity = event.currentTarget.value;
+
+    let allEstates = document.getElementsByClassName("estate");
+
+    for(let estate of allEstates)
+    {
+        let estateCity = estate.querySelector(".city").textContent;
+
+        estate.classList.remove("hidden");
+
+        if(estateCity !== currentCity)
+        {
+            estate.classList.add("hidden");
+        }
+    }
+
 });
 
 
@@ -130,10 +145,12 @@ let divEstates = document.querySelector("#estates");
 for(let estate of realEstates)
 {
     let div = document.createElement("div");
+    div.classList.add("estate");
     divEstates.appendChild(div);
 
     let h1 = document.createElement("h1");
-    h1.innerHTML = estate.type+" - "+estate.city;
+    h1.innerHTML = estate.city;
+    h1.classList.add("city");
     div.appendChild(h1);
 
     let optionParagraph = document.createElement("p");
