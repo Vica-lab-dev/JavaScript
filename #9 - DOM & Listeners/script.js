@@ -111,7 +111,7 @@ let realEstates =
         },
         {
             city: "Podgorica",
-            option: "null",
+            option: null,
             type: "Two-bedroom apartment",
             price: 32000,
             size: 55
@@ -138,7 +138,7 @@ for(let estate of realEstates)
 
     let optionParagraph = document.createElement("p");
     optionParagraph.innerHTML ="Option: "+estate.option;
-    if(estate.option === "null")
+    if(estate.option === null)
     {
         optionParagraph.innerHTML = "--";
     }
