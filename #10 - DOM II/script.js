@@ -1,5 +1,6 @@
 let cities =
     [
+        "All",
         "Beograd",
         "Subotica",
         "Novi Sad",
@@ -131,7 +132,7 @@ citySelector.addEventListener("change", function(event) {
 
         estate.classList.remove("hidden");
 
-        if(estateCity !== currentCity)
+        if(estateCity !== currentCity && currentCity !== "All")
         {
             estate.classList.add("hidden");
         }
