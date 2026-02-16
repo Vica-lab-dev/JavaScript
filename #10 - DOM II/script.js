@@ -8,16 +8,6 @@ let cities =
         "Zagreb"
     ]
 
-let citySelector = document.querySelector("#cities");
-
-for(let city of cities)
-{
-    let arrayCities = document.createElement("option");
-    arrayCities.innerHTML = city;
-
-    citySelector.appendChild(arrayCities);
-}
-
 let types =
     [
         "Apartments",
@@ -26,18 +16,6 @@ let types =
         "land plots",
         "garages/parking spaces"
     ]
-
-let typeSelector = document.querySelector("#type");
-
-for(let type of types)
-{
-    let arrayTypes = document.createElement("option");
-    arrayTypes.innerHTML = type;
-
-    typeSelector.appendChild(arrayTypes);
-}
-
-let roomSelector = document.querySelector("#rooms");
 
 let rooms =
     [
@@ -50,34 +28,6 @@ let rooms =
         "Duplex",
         "Loft"
     ]
-
-for(let room of rooms)
-{
-    let roomOption = document.createElement("option");
-    roomOption.innerHTML = room;
-
-    roomSelector.appendChild(roomOption);
-}
-
-let currentCity = null;
-let currentType = null;
-let currentRoom = null;
-
-typeSelector.addEventListener("change", function(event){
-    currentType = event.currentTarget.value;
-});
-
-roomSelector.addEventListener("change", function(event){
-    currentRoom = event.currentTarget.value;
-})
-
-citySelector.addEventListener("change", function(event) {
-    currentCity = event.currentTarget.value;
-});
-document.querySelector("#searchPropertiesButton").addEventListener("click", function() {
-    console.log(currentCity, currentType, currentRoom);
-});
-
 
 let realEstates =
     [
@@ -124,6 +74,56 @@ let realEstates =
             size: 20
         }
     ]
+
+let citySelector = document.querySelector("#cities");
+let typeSelector = document.querySelector("#type");
+let roomSelector = document.querySelector("#rooms");
+
+for(let city of cities)
+{
+    let arrayCities = document.createElement("option");
+    arrayCities.innerHTML = city;
+
+    citySelector.appendChild(arrayCities);
+}
+
+
+
+
+for(let type of types)
+{
+    let arrayTypes = document.createElement("option");
+    arrayTypes.innerHTML = type;
+
+    typeSelector.appendChild(arrayTypes);
+}
+
+
+for(let room of rooms)
+{
+    let roomOption = document.createElement("option");
+    roomOption.innerHTML = room;
+
+    roomSelector.appendChild(roomOption);
+}
+
+
+let currentCity = null;
+let currentType = null;
+let currentRoom = null;
+
+typeSelector.addEventListener("change", function(event){
+    currentType = event.currentTarget.value;
+});
+
+roomSelector.addEventListener("change", function(event){
+    currentRoom = event.currentTarget.value;
+})
+
+citySelector.addEventListener("change", function(event) {
+    currentCity = event.currentTarget.value;
+});
+
 
 let divEstates = document.querySelector("#estates");
 
