@@ -86,9 +86,23 @@ for(let city of cities)
     arrayCities.innerHTML = city;
 
     citySelector.appendChild(arrayCities);
+
+    let cityFound = false;
+
+    for(let estate of realEstates)
+    {
+        if(estate.city === city && estate.option !== null)
+        {
+            cityFound = true;
+            break;
+        }
+    }
+
+    if(!cityFound)
+    {
+        arrayCities.setAttribute("disabled", "true");
+    }
 }
-
-
 
 
 for(let type of types)
