@@ -16,3 +16,7 @@ div.addEventListener("mouseover", function (){
     div.style.backgroundColor = getRandomColor();
 })
 
+div.addEventListener("mouseout", function (){
+    div.style.backgroundColor = getRandomColor();
+})
+
