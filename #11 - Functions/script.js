@@ -54,7 +54,7 @@ let realEstates =
             size: 79
         },
         {
-            city: "Sarajevo",
+            city: "Zagreb",
             option: "commercial properties",
             type: "Loft",
             price: 48000,
@@ -91,9 +91,14 @@ for(let city of cities)
 
     for(let estate of realEstates)
     {
-        if(estate.city === city && estate.option !== null)
+        if(estate.city === city && estate.option !== null && city !== "All")
         {
             cityFound = true;
+            cityCount++;
+        }
+
+        if(city === "All" && estate.option !== null)
+        {
             cityCount++;
         }
     }
@@ -114,6 +119,8 @@ for(let type of types)
     arrayTypes.innerHTML = type;
 
     typeSelector.appendChild(arrayTypes);
+
+
 }
 
 
