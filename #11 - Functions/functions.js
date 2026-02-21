@@ -26,3 +26,10 @@ let vica = 27
 
 isAudlt(15);
 isAudlt(vica);
+
+function writeFullName(firstName, lastName)
+{
+    console.log(firstName+" "+lastName);
+}
+
+writeFullName("Petar", "Markovic");
