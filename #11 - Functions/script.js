@@ -85,18 +85,21 @@ for(let city of cities)
     let arrayCities = document.createElement("option");
     arrayCities.innerHTML = city;
 
-    citySelector.appendChild(arrayCities);
 
     let cityFound = false;
+    let cityCount = 0;
 
     for(let estate of realEstates)
     {
         if(estate.city === city && estate.option !== null)
         {
             cityFound = true;
-            break;
+            cityCount++;
         }
     }
+
+    arrayCities.innerHTML += " ("+cityCount+")";
+    citySelector.appendChild(arrayCities);
 
     if(!cityFound)
     {
