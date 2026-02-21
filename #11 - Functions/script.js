@@ -103,6 +103,8 @@ for(let city of cities)
         }
     }
 
+    arrayCities.value = city;
+
     arrayCities.innerHTML += " ("+cityCount+")";
     citySelector.appendChild(arrayCities);
 
