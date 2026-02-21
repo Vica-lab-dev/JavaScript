@@ -22,5 +22,7 @@ function isAudlt(age) {
     }
 }
 
+let vica = 27
+
 isAudlt(15);
-isAudlt(18);
+isAudlt(vica);
