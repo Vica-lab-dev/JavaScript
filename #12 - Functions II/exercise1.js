@@ -16,3 +16,6 @@ function checkLetter(letterList, letter)
 
 let result = checkLetter(letters, "A");
 console.log(result);
+
+let result2 = letters.includes("a");
+console.log(result2);
