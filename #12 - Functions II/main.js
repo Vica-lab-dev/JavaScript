@@ -5,3 +5,12 @@ function calculateTax(amount, tax = 0.15)
 }
 
 calculateTax(500, 0.2);
+
+function getFullName(firstName, lastName, middleName = '')
+{
+    console.log(firstName+" "+middleName+" "+lastName);
+}
+
+getFullName("Viktor", "Nenad", "Maletkovic");
+
+getFullName("Viktor","Maletkovic");
