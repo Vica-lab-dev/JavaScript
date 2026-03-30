@@ -8,8 +8,7 @@ calculateTax(500, 0.2);
 
 function getFullName(firstName, lastName, middleName = '')
 {
-    let fullName = firstName+" "+middleName+" "+lastName;
-    return fullName;
+    return firstName+" "+middleName+" "+lastName;
 }
 
 let viktor = getFullName("Viktor", "Maletkovic", "Nenad");
