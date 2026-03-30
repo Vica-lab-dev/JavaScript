@@ -1,7 +1,6 @@
 function calculateTax(amount, tax = 0.15)
 {
-    let total = amount + (amount * tax);
-    return total;
+    return amount + (amount * tax);
 }
 
 calculateTax(500, 0.2);
