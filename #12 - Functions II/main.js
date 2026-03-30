@@ -1,4 +1,4 @@
-function calculateTax(amount, tax)
+function calculateTax(amount, tax = 0.15)
 {
     let total = amount + (amount * tax);
     console.log(total);
