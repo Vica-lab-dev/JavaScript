@@ -1,16 +1,19 @@
 function calculateTax(amount, tax = 0.15)
 {
     let total = amount + (amount * tax);
-    console.log(total);
+    return total;
 }
 
 calculateTax(500, 0.2);
 
 function getFullName(firstName, lastName, middleName = '')
 {
-    console.log(firstName+" "+middleName+" "+lastName);
+    let fullName = firstName+" "+middleName+" "+lastName;
+    return fullName;
 }
 
-getFullName("Viktor", "Nenad", "Maletkovic");
+let viktor = getFullName("Viktor", "Maletkovic", "Nenad");
 
-getFullName("Viktor","Maletkovic");
+let ivan = getFullName("Ivan","Miskovic");
+
+console.log(viktor, ivan);
