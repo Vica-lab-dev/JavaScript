@@ -7,7 +7,7 @@ function maxNumber(numberList)
 
     for(let num of numberList)
     {
-        max = Math.max(num);
+        max = Math.max(max, num);
     }
 
     return max;
