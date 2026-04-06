@@ -16,11 +16,13 @@ colorDrawing.addEventListener("click", function()
 
     drawPath(color);
 
-    drawCounter++;
-    clickPoints = [];
+    incrementDrawCounter();
+    resetClickPoints();
 
-    lineCounter.innerHTML += "Drawing"+" "+drawCounter+" line is " + color+ " ";
+    sendDrawMessage(color);
 })
+
+
 
 
 canvasElement.addEventListener("click", function(event) {
@@ -35,24 +37,57 @@ canvasElement.addEventListener("click", function(event) {
     console.log(clickPoints)
 });
 
+
+
+
+
 canvasDraw.addEventListener("click", function()
 {
     let randomColor = generateRandomColor();
     drawPath(randomColor);
-    drawCounter++;
+    incrementDrawCounter();
 
-    lineCounter.innerHTML += "Drawing"+" "+drawCounter+" line is " +randomColor+ " ";
+    sendDrawMessage(randomColor);
 });
+
+
+
+
 
 canvasReset.addEventListener("click", function()
 {
     ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+    lineCounter.innerHTML = "" ;
 });
+
+
+function resetClickPoints()
+{
+    clickPoints = [];
+}
+
+
+
+function incrementDrawCounter()
+{
+    drawCounter++;
+}
+
+
 
 function generateRandomColor()
 {
     return "#"+Math.floor(Math.random()*16777215).toString(16);
 }
+
+
+function sendDrawMessage(color)
+{
+    lineCounter.innerHTML += "Drawing"+" "+drawCounter+" line is " +color+ " ";
+
+}
+
+
 
 function drawPath(color)
 {
@@ -68,7 +103,5 @@ function drawPath(color)
 
     ctx.strokeStyle = color;
     ctx.stroke();
-    clickPoints = [];
-
-
+    resetClickPoints();
 }
