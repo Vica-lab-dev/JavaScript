@@ -24,20 +24,9 @@ canvasElement.addEventListener("click", function(event) {
 
 canvasDraw.addEventListener("click", function()
 {
-    if (clickPoints.length < 2) return;
-
-    ctx.beginPath();
-    ctx.moveTo(clickPoints[0].x, clickPoints[0].y);
-
-    for(let i = 1; i < clickPoints.length; i++)
-    {
-        ctx.lineTo(clickPoints[i].x, clickPoints[i].y);
-    }
-
     let randomColor = generateRandomColor();
-    ctx.strokeStyle = randomColor;
-    ctx.stroke();
-    clickPoints = [];
+
+    drawPath(randomColor);
 
     drawCounter++;
 
@@ -52,5 +41,21 @@ canvasReset.addEventListener("click", function()
 function generateRandomColor()
 {
     return "#"+Math.floor(Math.random()*16777215).toString(16);
+}
 
+function drawPath(color)
+{
+    if (clickPoints.length < 2) return;
+
+    ctx.beginPath();
+    ctx.moveTo(clickPoints[0].x, clickPoints[0].y);
+
+    for(let i = 1; i < clickPoints.length; i++)
+    {
+        ctx.lineTo(clickPoints[i].x, clickPoints[i].y);
+    }
+
+    ctx.strokeStyle = color;
+    ctx.stroke();
+    clickPoints = [];
 }
