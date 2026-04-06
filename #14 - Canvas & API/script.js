@@ -5,9 +5,22 @@ let canvasDraw = document.querySelector("#draw");
 let canvasReset = document.querySelector("#reset");
 let ctx = canvasElement.getContext("2d");
 let lineCounter = document.querySelector("#lineCounter");
+let colorDrawing = document.querySelector("#colorDrawing");
 let drawCounter = 0;
 
 
+
+colorDrawing.addEventListener("click", function()
+{
+    let color = prompt("Please enter a color");
+
+    drawPath(color);
+
+    drawCounter++;
+    clickPoints = [];
+
+    lineCounter.innerHTML += "Drawing"+" "+drawCounter+" line is " + color+ " ";
+})
 
 
 canvasElement.addEventListener("click", function(event) {
@@ -25,12 +38,10 @@ canvasElement.addEventListener("click", function(event) {
 canvasDraw.addEventListener("click", function()
 {
     let randomColor = generateRandomColor();
-
     drawPath(randomColor);
-
     drawCounter++;
 
-    lineCounter.innerHTML += "Drawing"+" "+drawCounter+" line is " + randomColor+ " ";
+    lineCounter.innerHTML += "Drawing"+" "+drawCounter+" line is " +randomColor+ " ";
 });
 
 canvasReset.addEventListener("click", function()
@@ -58,4 +69,6 @@ function drawPath(color)
     ctx.strokeStyle = color;
     ctx.stroke();
     clickPoints = [];
+
+
 }
