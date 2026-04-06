@@ -34,7 +34,7 @@ canvasDraw.addEventListener("click", function()
         ctx.lineTo(clickPoints[i].x, clickPoints[i].y);
     }
 
-    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    let randomColor = generateRandomColor();
     ctx.strokeStyle = "#"+randomColor;
     ctx.stroke();
     clickPoints = [];
@@ -47,5 +47,10 @@ canvasDraw.addEventListener("click", function()
 canvasReset.addEventListener("click", function()
 {
     ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
-
 });
+
+function generateRandomColor()
+{
+    return Math.floor(Math.random()*16777215).toString(16);
+
+}
