@@ -1,4 +1,22 @@
 let productsHolder = document.querySelector('#products');
+let searchProduct = document.querySelector('#searchProduct');
+
+searchProduct.addEventListener('click', function()
+{
+    let searchText = document.querySelector('#searchText');
+    let searchLink = 'https://dummyjson.com/products/search?q='+searchText.value;
+
+    fetch(searchLink)
+        .then(res => res.json())
+        .then(data =>
+        {
+            productsHolder.innerHTML = '';
+            for(let product of data.products)
+            {
+                appendProductToHolder(product);
+            }
+        });
+})
 
 fetch("https://dummyjson.com/products?limit=20&sortBy=price&order=desc")
 .then(function(response)
