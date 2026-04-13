@@ -27,6 +27,21 @@ fetch("https://dummyjson.com/recipes/tags")
     }).catch(error => console.log(error));
 
 
+tagsSelect.addEventListener("change", function()
+{
+    apiUrl = "https://dummyjson.com/recipes/tag/"+this.value;
+    console.log(apiUrl);
+
+    fetch(apiUrl).then(response => response.json()).then(data =>
+    {
+        mainDiv.innerHTML = "";
+
+        data.recipes.forEach(recipe =>
+        {
+            appendCookingRecipe(recipe);
+        });
+    })
+})
 
 function buildInstructionsElement(instructions)
 {
