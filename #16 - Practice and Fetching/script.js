@@ -1,15 +1,34 @@
 let mainDiv = document.querySelector("#recipes");
 let tagsSelect = document.querySelector("#tags");
 
-fetch("https://dummyjson.com/recipes?limit=10&sortBy=name&order=asc")
-.then(response => response.json())
-.then(data =>
+let params = new URLSearchParams(window.location.search);
+let category = params.get("category");
+
+if(category === null)
 {
-    data.recipes.forEach(recipe =>
+    fetch("https://dummyjson.com/recipes?limit=10&sortBy=name&order=asc")
+        .then(response => response.json())
+        .then(data => {
+            data.recipes.forEach(recipe =>
+            {
+                appendCookingRecipe(recipe);
+            });
+        });
+}
+else
+{
+    apiUrl = "https://dummyjson.com/recipes/tag/"+category;
+
+    fetch(apiUrl).then(response => response.json()).then(data =>
     {
-        appendCookingRecipe(recipe);
-    });
-}).catch(error => console.log(error));
+        mainDiv.innerHTML = "";
+
+        data.recipes.forEach(recipe =>
+        {
+            appendCookingRecipe(recipe);
+        });
+    })
+}
 
 
 
@@ -73,7 +92,11 @@ function appendCookingRecipe(recipe)
     let recipeCuisine = document.createElement("p");
     recipeCuisine.innerText = recipe.cuisine;
 
-    singleRecipe.append(recipeName, recipeCuisine, cookingInstructions);
+    let permalinkElement = document.createElement("a");
+    permalinkElement.innerText = "Show recipe";
+    permalinkElement.href = "permalink.html?id="+recipe.id;
+
+    singleRecipe.append(recipeName, recipeCuisine, cookingInstructions, permalinkElement);
 
     mainDiv.appendChild(singleRecipe);
 }
