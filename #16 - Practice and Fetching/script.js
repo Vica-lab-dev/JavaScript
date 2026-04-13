@@ -5,15 +5,7 @@ fetch("https://dummyjson.com/recipes?limit=10&sortBy=name&order=asc")
     let mainDiv = document.querySelector("#recipes");
     data.recipes.forEach(recipe =>
     {
-        let recipeInstruction = document.createElement("ul");
-
-        for(let instruction of recipe.instructions)
-        {
-            let instructionElement = document.createElement("li");
-            instructionElement.innerText = instruction;
-
-            recipeInstruction.appendChild(instructionElement);
-        }
+        let cookingInstructions = buildInstructionsElement(recipe.instructions);
 
         let singleRecipe = document.createElement("div");
 
@@ -26,8 +18,23 @@ fetch("https://dummyjson.com/recipes?limit=10&sortBy=name&order=asc")
         let ingredientsList= document.createElement("li");
         ingredientsList.innerText = recipe.ingredients;
 
-        singleRecipe.append(recipeName, recipeCuisine, recipeInstruction);
+        singleRecipe.append(recipeName, recipeCuisine, cookingInstructions);
         mainDiv.appendChild(singleRecipe);
     });
 })
     .catch(error => console.log(error));
+
+function buildInstructionsElement(instructions)
+{
+    let recipeInstruction = document.createElement("ul");
+
+    for(let instruction of instructions)
+    {
+        let instructionElement = document.createElement("li");
+        instructionElement.innerText = instruction;
+
+        recipeInstruction.appendChild(instructionElement);
+    }
+
+    return recipeInstruction;
+}
