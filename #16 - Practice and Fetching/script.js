@@ -1,4 +1,5 @@
 let mainDiv = document.querySelector("#recipes");
+let tagsSelect = document.querySelector("#tags");
 
 fetch("https://dummyjson.com/recipes?limit=10&sortBy=name&order=asc")
 .then(response => response.json())
@@ -8,8 +9,24 @@ fetch("https://dummyjson.com/recipes?limit=10&sortBy=name&order=asc")
     {
         appendCookingRecipe(recipe);
     });
-})
-    .catch(error => console.log(error));
+}).catch(error => console.log(error));
+
+
+
+fetch("https://dummyjson.com/recipes/tags")
+    .then(response => response.json())
+    .then(data => {
+        for(let tag of data)
+        {
+            let tagsOption = document.createElement("option");
+            tagsOption.textContent = tag;
+            tagsOption.value = tag;
+            tagsSelect.appendChild(tagsOption);
+
+        }
+    }).catch(error => console.log(error));
+
+
 
 function buildInstructionsElement(instructions)
 {
@@ -25,6 +42,9 @@ function buildInstructionsElement(instructions)
 
     return recipeInstruction;
 }
+
+
+
 
 function appendCookingRecipe(recipe)
 {
