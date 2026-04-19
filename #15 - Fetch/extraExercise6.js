@@ -11,3 +11,4 @@ fetch("https://api.thecatapi.com/v1/breeds")
             ul.appendChild(li);
         });
     })
+.catch(err => console.log(err));

@@ -24,3 +24,4 @@ fetch("https://api.thecatapi.com/v1/breeds")
     });
 
 })
+.catch(err => console.log(err));
