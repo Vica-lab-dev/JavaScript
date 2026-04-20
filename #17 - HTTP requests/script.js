@@ -1,3 +1,5 @@
+let div = document.querySelector("#delete");
+
 
 for(let i = 18; i <= 100; i++)
 {
@@ -37,6 +39,16 @@ function register(name, lastName, age)
     .then(data =>
     {
         alert("Successfully registered as "+data.firstName);
+
+        if(data?.id)
+        {
+            let a = document.createElement("a");
+            a.href = "delete.html?id=" + data.id;
+            a.textContent = "Delete user";
+            a.style.color = "red";
+
+            div.append(a);
+        }
     })
 }
 
