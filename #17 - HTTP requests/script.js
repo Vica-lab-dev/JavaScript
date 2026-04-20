@@ -1,4 +1,3 @@
-let div = document.querySelector("#delete");
 
 
 for(let i = 18; i <= 100; i++)
@@ -24,6 +23,16 @@ document.querySelector("#register").addEventListener('click', function()
 
 });
 
+document.querySelector("#delete").addEventListener('click', function()
+{
+    let apiURL = "https://dummyjson.com/users/"+this.getAttribute("userID");
+
+    fetch(apiURL, {
+        method: "DELETE",
+    }).then(res => res.json())
+        .then(data => console.log(data))
+});
+
 function register(name, lastName, age)
 {
     fetch("https://dummyjson.com/users/add", {
@@ -40,15 +49,10 @@ function register(name, lastName, age)
     {
         alert("Successfully registered as "+data.firstName);
 
-        if(data?.id)
-        {
-            let a = document.createElement("a");
-            a.href = "delete.html?id=" + data.id;
-            a.textContent = "Delete user";
-            a.style.color = "red";
-
-            div.append(a);
-        }
+        let deleteButton = document.querySelector("#delete");
+        deleteButton.style.color = "red";
+        deleteButton.setAttribute("userID", data.id);
+        deleteButton.removeAttribute("hidden");
     })
 }
 
