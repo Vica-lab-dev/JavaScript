@@ -24,13 +24,6 @@ function sendPost()
 
 button.addEventListener("click", function() {
     sendPost().then(success => {
-        if(success)
-        {
-            paragraph.textContent = "TRUE";
-        }
-        else
-        {
-            paragraph.textContent = "FALSE";
-        }
+        paragraph.textContent = success ? "TRUE" : "FALSE";
     });
 })
