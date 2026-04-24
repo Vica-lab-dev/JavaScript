@@ -1,7 +1,9 @@
 const apiUrl ="http://www.omdbapi.com/"
 
-let response = await callOMDbApi("t=Terminator");
-console.log(response);
+let terminatorSearch = await callOMDbApi("s=Terminator");
+
+let homeAloneSearch = await callOMDbApi("s=Home Alone&y=1990");
+console.log(homeAloneSearch);
 
 async function callOMDbApi(params) {
     const url = apiUrl+"?apiKey="+apiKey+"&"+params;
