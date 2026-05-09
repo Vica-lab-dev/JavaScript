@@ -21,14 +21,11 @@ categorySelect.addEventListener("change", async function (){
 
         div.addEventListener("click", async function(){
             let recipeJson = await getMealDBData("lookup.php?i="+meal.idMeal);
+            let cockatil = await getRandomCocktail()
 
-            const cocktailResponse = await fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php");
-            const cocktailJson = await cocktailResponse.json();
 
-            const cocktail = cocktailJson.drinks[0];
-
-            document.querySelector("#recipeText").innerText = recipeJson.meals[0].strInstructions+
-                "\nSuggested cocktail: "+cocktail.strDrink;
+            document.querySelector("#recipeText").innerText = recipeJson.meals[0].strInstructions;
+            document.querySelector("#cocktail").innerText =cockatil.drinks[0].strDrink+" - "+cockatil.drinks[0].strInstructions;
             document.querySelector("#popup").style.display = "flex";
         });
     }
@@ -65,4 +62,9 @@ function appendCategory(category){
     categoryElement.value = category.strCategory;
     categoryElement.innerText = category.strCategory;
     categorySelect.append(categoryElement);
+}
+
+async function getRandomCocktail() {
+    const cocktailResponse = await fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php");
+    return await cocktailResponse.json();
 }
