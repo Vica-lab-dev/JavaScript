@@ -7,10 +7,7 @@ const data = await getMealDBData("categories.php");
 const categorySelect = document.querySelector("#categories");
 
 for(let category of data.categories) {
-    let categoryElement = document.createElement("option");
-    categoryElement.value = category.strCategory;
-    categoryElement.innerText = category.strCategory;
-    categorySelect.append(categoryElement);
+    appendCategory(category);
 }
 categorySelect.addEventListener("change", async function (){
     mainDiv.innerHTML = "";
@@ -53,5 +50,12 @@ function showMeal(meal){
     mainDiv.append(div);
 
     return div;
+}
+
+function appendCategory(category){
+    let categoryElement = document.createElement("option");
+    categoryElement.value = category.strCategory;
+    categoryElement.innerText = category.strCategory;
+    categorySelect.append(categoryElement);
 }
 
