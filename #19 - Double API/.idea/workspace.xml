@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86180aea-ec7e-4f70-8b93-13582027fa03" name="Changes" comment="Homework">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Vica-lab-dev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Vica-lab-dev/JavaScript.git",
+    "accountId": "5270e9c1-19bd-4c3c-bb6f-fe5cebd2419d"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3DV9G10MVrqyDtyGEojaJKy5KfZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.script.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/JavaScript/#19 - Double API",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86180aea-ec7e-4f70-8b93-13582027fa03" name="Changes" comment="" />
+      <created>1778356271013</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778356271013</updated>
+      <workItem from="1778356272042" duration="7436000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add .gitignore file">
+      <option name="closed" value="true" />
+      <created>1778356312141</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778356312141</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fetch meal categories from API and populate select form">
+      <option name="closed" value="true" />
+      <created>1778357224619</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778357224619</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Display meals dynamically on category change">
+      <option name="closed" value="true" />
+      <created>1778359710573</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778359710573</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Reset meal container before displaying meals">
+      <option name="closed" value="true" />
+      <created>1778359791798</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778359791798</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Relocate inline styles to head section">
+      <option name="closed" value="true" />
+      <created>1778359881562</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778359881562</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add meal details popup and improve meal card styling">
+      <option name="closed" value="true" />
+      <created>1778361084695</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778361084695</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add close button functionality for recipe popup">
+      <option name="closed" value="true" />
+      <created>1778361339167</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778361339167</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Create reusable function for MealDB API calls">
+      <option name="closed" value="true" />
+      <created>1778361705980</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1778361705980</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Create reusable showMeal function">
+      <option name="closed" value="true" />
+      <created>1778362090312</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1778362090312</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Create reusable appendCategory function">
+      <option name="closed" value="true" />
+      <created>1778362145060</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1778362145060</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix classList usage for div">
+      <option name="closed" value="true" />
+      <created>1778362281200</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1778362281200</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add .gitignore file" />
+    <MESSAGE value="Fetch meal categories from API and populate select form" />
+    <MESSAGE value="Display meals dynamically on category change" />
+    <MESSAGE value="Reset meal container before displaying meals" />
+    <MESSAGE value="Relocate inline styles to head section" />
+    <MESSAGE value="Add meal details popup and improve meal card styling" />
+    <MESSAGE value="Add close button functionality for recipe popup" />
+    <MESSAGE value="Create reusable function for MealDB API calls" />
+    <MESSAGE value="Create reusable showMeal function" />
+    <MESSAGE value="Create reusable appendCategory function" />
+    <MESSAGE value="Fix classList usage for div" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix classList usage for div" />
+  </component>
+</project>
