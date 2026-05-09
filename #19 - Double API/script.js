@@ -39,7 +39,11 @@ categorySelect.addEventListener("change", async function (){
 
             document.querySelector("#recipeText").innerText = recipeJson.meals[0].strInstructions;
             document.querySelector("#popup").style.display = "flex";
-        })
+        });
     }
+});
+
+document.querySelector("#closePopup").addEventListener("click", function(){
+    document.querySelector("#popup").style.display = "none";
 })
 
