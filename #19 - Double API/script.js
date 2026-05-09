@@ -2,8 +2,7 @@ const mainDiv = document.querySelector('#mealsMainDiv');
 
 const mealDbAPI = "https://www.themealdb.com/api/json/v1/1/";
 
-const response = await fetch(mealDbAPI+"categories.php");
-const data = await response.json();
+const data = await getMealDBData("categories.php");
 
 const categorySelect = document.querySelector("#categories");
 
@@ -16,8 +15,7 @@ for(let category of data.categories){
 
 categorySelect.addEventListener("change", async function (){
     mainDiv.innerHTML = "";
-    const mealsResponse = await fetch(mealDbAPI+"filter.php?c="+categorySelect.value);
-    const mealsJson = await mealsResponse.json();
+    const mealsJson = await getMealDBData("filter.php?c="+categorySelect.value);
 
     for(let meal of mealsJson.meals){
         let div = document.createElement("div");
@@ -34,8 +32,7 @@ categorySelect.addEventListener("change", async function (){
         mainDiv.append(div);
 
         div.addEventListener("click", async function(){
-            let recipeResponse = await fetch(mealDbAPI+"lookup.php?i="+meal.idMeal);
-            let recipeJson = await recipeResponse.json();
+            let recipeJson = await getMealDBData("lookup.php?i="+meal.idMeal);
 
             document.querySelector("#recipeText").innerText = recipeJson.meals[0].strInstructions;
             document.querySelector("#popup").style.display = "flex";
@@ -45,5 +42,10 @@ categorySelect.addEventListener("change", async function (){
 
 document.querySelector("#closePopup").addEventListener("click", function(){
     document.querySelector("#popup").style.display = "none";
-})
+});
+
+async function getMealDBData(endpoint){
+    let response = await fetch(mealDbAPI+endpoint);
+    return await response.json();
+}
 
