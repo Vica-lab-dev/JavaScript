@@ -37,7 +37,7 @@ async function getMealDBData(endpoint){
 
 function showMeal(meal){
     let div = document.createElement("div");
-    div.classList.add = "singleMeal";
+    div.classList.add("singleMeal");
 
     let h5 = document.createElement("h5");
     h5.innerText = meal.strMeal;
