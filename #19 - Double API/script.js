@@ -6,30 +6,19 @@ const data = await getMealDBData("categories.php");
 
 const categorySelect = document.querySelector("#categories");
 
-for(let category of data.categories){
+for(let category of data.categories) {
     let categoryElement = document.createElement("option");
     categoryElement.value = category.strCategory;
     categoryElement.innerText = category.strCategory;
     categorySelect.append(categoryElement);
 }
-
 categorySelect.addEventListener("change", async function (){
     mainDiv.innerHTML = "";
     const mealsJson = await getMealDBData("filter.php?c="+categorySelect.value);
 
     for(let meal of mealsJson.meals){
-        let div = document.createElement("div");
-        div.classList.add("singleMeal");
 
-        let h5 = document.createElement("h5");
-        h5.innerText = meal.strMeal;
-
-        let img = document.createElement("img");
-        img.classList.add("mealImg");
-        img.setAttribute("src", meal.strMealThumb);
-
-        div.append(h5, img);
-        mainDiv.append(div);
+        let div = showMeal(meal);
 
         div.addEventListener("click", async function(){
             let recipeJson = await getMealDBData("lookup.php?i="+meal.idMeal);
@@ -47,5 +36,22 @@ document.querySelector("#closePopup").addEventListener("click", function(){
 async function getMealDBData(endpoint){
     let response = await fetch(mealDbAPI+endpoint);
     return await response.json();
+}
+
+function showMeal(meal){
+    let div = document.createElement("div");
+    div.classList.add = "singleMeal";
+
+    let h5 = document.createElement("h5");
+    h5.innerText = meal.strMeal;
+
+    let img = document.createElement("img");
+    img.classList.add("mealImg");
+    img.setAttribute("src", meal.strMealThumb);
+
+    div.append(h5, img);
+    mainDiv.append(div);
+
+    return div;
 }
 
