@@ -15,6 +15,7 @@ for(let category of data.categories){
 }
 
 categorySelect.addEventListener("change", async function (){
+    mainDiv.innerHTML = "";
     const mealsResponse = await fetch(mealDbAPI+"filter.php?c="+categorySelect.value);
     const mealsJson = await mealsResponse.json();
 
