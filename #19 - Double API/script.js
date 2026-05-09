@@ -21,13 +21,25 @@ categorySelect.addEventListener("change", async function (){
 
     for(let meal of mealsJson.meals){
         let div = document.createElement("div");
+        div.classList.add("singleMeal");
+
         let h5 = document.createElement("h5");
         h5.innerText = meal.strMeal;
+
         let img = document.createElement("img");
         img.classList.add("mealImg");
         img.setAttribute("src", meal.strMealThumb);
+
         div.append(h5, img);
         mainDiv.append(div);
+
+        div.addEventListener("click", async function(){
+            let recipeResponse = await fetch(mealDbAPI+"lookup.php?i="+meal.idMeal);
+            let recipeJson = await recipeResponse.json();
+
+            document.querySelector("#recipeText").innerText = recipeJson.meals[0].strInstructions;
+            document.querySelector("#popup").style.display = "flex";
+        })
     }
 })
 
