@@ -21,12 +21,17 @@ categorySelect.addEventListener("change", async function (){
 
         div.addEventListener("click", async function(){
             let recipeJson = await getMealDBData("lookup.php?i="+meal.idMeal);
-                document.querySelector("#recipeText").innerText = recipeJson.meals[0].strInstructions
-                document.querySelector("#popup").style.display = "flex";
+
+            const cocktailResponse = await fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php");
+            const cocktailJson = await cocktailResponse.json();
+
+            const cocktail = cocktailJson.drinks[0];
+
+            document.querySelector("#recipeText").innerText = recipeJson.meals[0].strInstructions+
+                "\nSuggested cocktail: "+cocktail.strDrink;
+            document.querySelector("#popup").style.display = "flex";
         });
     }
-    document.querySelector("#recipeText").innerText = recipeJson.meals[0].strInstructions
-    document.querySelector("#popup").style.display = "flex";
 });
 
 document.querySelector("#closePopup").addEventListener("click", function(){
