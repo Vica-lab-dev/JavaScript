@@ -15,5 +15,7 @@ document.querySelector("#createTask").addEventListener("click", function () {
         name: taskName,
     });
 
-    console.log(tasks);
+    const jsonTasks = JSON.stringify(tasks);
+    localStorage.setItem("tasks", jsonTasks);
+
 });
