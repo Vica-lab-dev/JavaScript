@@ -1,27 +1,12 @@
 const loggedIn = localStorage.getItem("loggedIn");
-const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+showTasks();
 
 if(loggedIn === null){
     window.location.href = "index.html";
 }
 
-const taskList = document.querySelector("#taskList");
-
-if(tasks.length >= 1) {
-    for(let task of tasks){
-        let singleTask = document.createElement("div");
-
-        let taskName = document.createElement("p");
-        taskName.innerText = task.name;
-
-        let deleteTask = document.createElement("button");
-        deleteTask.setAttribute("data-task-id", task.id);
-        deleteTask.innerText = "Delete task";
-
-        singleTask.append(taskName, deleteTask);
-        taskList.append(singleTask);
-    }
-}
 
 document.querySelector("#createTask").addEventListener("click", function () {
     const taskName = document.querySelector("#taskName").value;
@@ -35,5 +20,33 @@ document.querySelector("#createTask").addEventListener("click", function () {
 
     const jsonTasks = JSON.stringify(tasks);
     localStorage.setItem("tasks", jsonTasks);
-
+    showTasks();
 });
+
+function showTasks(){
+
+    const taskList = document.querySelector("#taskList");
+    taskList.innerHTML = '';
+
+    if(tasks.length >= 1) {
+        for(let task of tasks){
+            let singleTask = document.createElement("div");
+
+            let taskName = document.createElement("p");
+            taskName.innerText = task.name;
+
+            let deleteTask = document.createElement("button");
+            deleteTask.innerText = "Delete task";
+
+            deleteTask.addEventListener("click", function () {
+                tasks = tasks.filter(filterTask => filterTask.id !== task.id);
+                showTasks();
+
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+            })
+
+            singleTask.append(taskName, deleteTask);
+            taskList.append(singleTask);
+        }
+    }
+}
