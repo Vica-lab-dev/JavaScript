@@ -1,5 +1,5 @@
 const loggedIn = localStorage.getItem("loggedIn");
-const tasks = [];
+const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 if(loggedIn === null){
     window.location.href = "index.html";
