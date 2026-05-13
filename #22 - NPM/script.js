@@ -1,0 +1,5 @@
+let name = "Vica";
+let age = 28;
+let hobbies = ['programming'];
+let programmer = true;
+console.log(name, age, hobbies, programmer);
