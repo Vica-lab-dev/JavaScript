@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { getUserLocation} from "./components/location.js";
 
 let location = localStorage.getItem('location') || getUserLocation();
 localStorage.setItem('location', location);
@@ -23,14 +24,4 @@ try {
     }
 } catch (error) {
     alert("Something went wrong. Please try again.");
-}
-
-function getUserLocation() {
-    let userLocation = "";
-
-    while(userLocation.trim() === "") {
-        userLocation = prompt('Enter location');
-    }
-
-    return userLocation;
 }
