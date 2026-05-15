@@ -1,21 +1,11 @@
 import axios from 'axios'
 
-let location = localStorage.getItem('location') || "";
-
-while(location.trim() === "") {
-    location = prompt('Enter location');
-}
-
+let location = localStorage.getItem('location') || getUserLocation();
 localStorage.setItem('location', location);
 
 document.querySelector("#locationButton").addEventListener('click', function () {
-    let location = "";
-
-    while(location.trim() === "") {
-        location = prompt('Enter location');
-    }
-
-    localStorage.setItem('location', location);
+    let askLocation = getUserLocation();
+    localStorage.setItem('location', askLocation);
 });
 
 //http://api.weatherapi.com/v1/current.json?key=apiKey&q=London&aqi=no
@@ -26,7 +16,6 @@ try {
             q: location,
             aqi: "no"
         }
-
     });
 
     if(!response.data.current.is_day){
@@ -36,4 +25,12 @@ try {
     alert("Something went wrong. Please try again.");
 }
 
+function getUserLocation() {
+    let userLocation = "";
 
+    while(userLocation.trim() === "") {
+        userLocation = prompt('Enter location');
+    }
+
+    return userLocation;
+}
