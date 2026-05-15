@@ -14,7 +14,9 @@ document.querySelector("#locationButton").addEventListener('click', function () 
     while(location.trim() === "") {
         location = prompt('Enter location');
     }
-} )
+
+    localStorage.setItem('location', location);
+});
 
 //http://api.weatherapi.com/v1/current.json?key=apiKey&q=London&aqi=no
 try {
