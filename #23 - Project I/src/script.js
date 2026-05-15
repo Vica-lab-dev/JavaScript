@@ -1,12 +1,20 @@
 import axios from 'axios'
 
-let location = "";
+let location = localStorage.getItem('location') || "";
 
 while(location.trim() === "") {
     location = prompt('Enter location');
 }
 
 localStorage.setItem('location', location);
+
+document.querySelector("#locationButton").addEventListener('click', function () {
+    let location = "";
+
+    while(location.trim() === "") {
+        location = prompt('Enter location');
+    }
+} )
 
 //http://api.weatherapi.com/v1/current.json?key=apiKey&q=London&aqi=no
 try {
