@@ -6,9 +6,8 @@ let location = localStorage.getItem('location') || getUserLocation();
 localStorage.setItem('location', location);
 
 document.querySelector("#locationButton").addEventListener('click', function () {
-    let askLocation = getUserLocation();
-    localStorage.setItem('location', askLocation);
-    location = askLocation;
+    location = getUserLocation();
+    localStorage.setItem('location', location);
 });
 
     const response = await getCurrentWeatherForLocation(location);
