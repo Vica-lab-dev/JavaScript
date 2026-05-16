@@ -1,11 +1,10 @@
 import axios from "axios";
 
-//http://api.weatherapi.com/v1/current.json?key=apiKey&q=London&aqi=no
 
 export async function getCurrentWeatherForLocation(location) {
-    return await axios.get("http://api.weatherapi.com/v1/current.json", {
+    return await axios.get(process.env.API_URL+"/v1/current.json", {
         params: {
-            key: apiKey,
+            key: process.env.API_KEY,
             q: location,
             aqi: "no"
         }
