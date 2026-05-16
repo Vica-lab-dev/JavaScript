@@ -25,8 +25,8 @@ document.querySelector("#showWeatherForMyLocation").addEventListener('click', as
         const long = position.coords.longitude;
 
         let coords = await getGeolocationForCoords(lat, long);
-        console.log(coords);
-        console.log(lat, long);
+        location = coords.data[0]['name'];
+        localStorage.setItem('location', location);
     });
 });
 
