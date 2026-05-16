@@ -13,5 +13,4 @@ export async function getGeolocationForCoords(lat, long) {
     } catch (ecxeption) {
         return alert("Something went wrong while fetching geolocation data. Try again!");
     }
-
 }
