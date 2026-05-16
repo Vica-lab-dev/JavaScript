@@ -9,11 +9,10 @@ import {getGeolocationForCoords} from "./components/openWeatherApi.js";
 let mainDiv = document.querySelector("#mainDiv");
 
 let location = localStorage.getItem('location') || getUserLocation();
-localStorage.setItem('location', location);
+updateLocation(location);
 
 document.querySelector("#locationButton").addEventListener('click', async function () {
-    location = getUserLocation();
-    localStorage.setItem('location', location);
+    updateLocation(getUserLocation());
 });
 
 document.querySelector("#showWeatherForMyLocation").addEventListener('click', async () => {
@@ -31,8 +30,7 @@ document.querySelector("#showWeatherForMyLocation").addEventListener('click', as
            cityName = cityName.replace("Municipality", "");
         }
 
-        location = cityName;
-        localStorage.setItem('location', location);
+        updateLocation(cityName);
     });
 });
 
@@ -51,3 +49,8 @@ for(let forecast of forecastResponse.data.forecast.forecastday){
 const dateFormatted = getDateInFuture(30);
 const futureWeather = await getWeatherInFuture(location, dateFormatted);
 console.log(futureWeather);
+
+function updateLocation(newLocation) {
+    location = newLocation;
+    localStorage.setItem('location', newLocation);
+}
