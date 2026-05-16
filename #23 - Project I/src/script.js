@@ -4,6 +4,7 @@ import {getCurrentWeatherForLocation } from "./components/weatherApi.js";
 import { getForecast } from "./components/forecast.js";
 import { getWeatherInFuture } from "./components/weatherApi.js";
 import { getDateInFuture } from "./helpers/dateHelper.js";
+import {getGeolocationForCoords} from "./components/openWeatherApi.js";
 
 let mainDiv = document.querySelector("#mainDiv");
 
@@ -15,13 +16,16 @@ document.querySelector("#locationButton").addEventListener('click', async functi
     localStorage.setItem('location', location);
 });
 
-document.querySelector("#showWeatherForMyLocation").addEventListener('click', () => {
+document.querySelector("#showWeatherForMyLocation").addEventListener('click', async () => {
     if(!navigator.geolocation) {
         return alert("Geolocation is not supported");
     }
-    navigator.geolocation.getCurrentPosition((position) => {
+    navigator.geolocation.getCurrentPosition(async (position) => {
         const lat = position.coords.latitude;
         const long = position.coords.longitude;
+
+        let coords = await getGeolocationForCoords(lat, long);
+        console.log(coords);
         console.log(lat, long);
     });
 });
