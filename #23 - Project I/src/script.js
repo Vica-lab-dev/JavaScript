@@ -2,7 +2,8 @@ import axios from 'axios'
 import { getUserLocation} from "./components/location.js";
 import {getCurrentWeatherForLocation } from "./components/weatherApi.js";
 import { getForecast } from "./components/forecast.js";
-import { getWeatherInFuture} from "./components/weatherApi.js";
+import { getWeatherInFuture } from "./components/weatherApi.js";
+import { getDateInFuture } from "./helpers/dateHelper.js";
 
 let mainDiv = document.querySelector("#mainDiv");
 
@@ -26,11 +27,6 @@ for(let forecast of forecastResponse.data.forecast.forecastday){
     console.log("Date: "+forecast.date+" Max Temp: "+forecast.day.maxtemp_c+" Min Temp: "+forecast.day.mintemp_c);
 }
 
-const today = new Date();
-const futureDate = new Date();
-
-futureDate.setDate(today.getDate()+30);
-
-const dateFormatted= futureDate.toISOString().split("T")[0];
-
+const dateFormatted = getDateInFuture(30);
 const futureWeather = await getWeatherInFuture(location, dateFormatted);
+console.log(futureWeather);
