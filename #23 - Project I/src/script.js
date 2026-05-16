@@ -25,7 +25,13 @@ document.querySelector("#showWeatherForMyLocation").addEventListener('click', as
         const long = position.coords.longitude;
 
         let coords = await getGeolocationForCoords(lat, long);
-        location = coords.data[0]['name'];
+
+        let cityName = coords.data[0]['name'];
+        if(cityName.includes("Municipality")){
+           cityName = cityName.replace("Municipality", "");
+        }
+
+        location = cityName;
         localStorage.setItem('location', location);
     });
 });
