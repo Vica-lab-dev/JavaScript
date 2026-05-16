@@ -15,6 +15,17 @@ document.querySelector("#locationButton").addEventListener('click', async functi
     localStorage.setItem('location', location);
 });
 
+document.querySelector("#showWeatherForMyLocation").addEventListener('click', () => {
+    if(!navigator.geolocation) {
+        return alert("Geolocation is not supported");
+    }
+    navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const long = position.coords.longitude;
+        console.log(lat, long);
+    });
+});
+
 const response = await getCurrentWeatherForLocation(location);
 
 if(!response.data.current.is_day){
